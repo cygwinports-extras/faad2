@@ -1,0 +1,7 @@
+category: Audio
+requires: cygwin glib gtk+ xmms libfaad0 libmp4v2_0
+external-source: faad2
+sdesc: "XMMS MPEG2/MPEG4/AAC Input plugin"
+ldesc: "FAAD2 is a HE, LC, MAIN and LTP profile, MPEG2 and MPEG-4 AAC
+decoder, and includes code for SBR (HE AAC) decoding. FAAD2 is licensed
+under the GPL."
