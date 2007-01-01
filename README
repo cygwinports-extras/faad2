@@ -5,26 +5,27 @@ and includes code for SBR (HE AAC) decoding. FAAD2 is licensed under the
 GPL.
 
 Runtime requirements:
-  cygwin-1.5.21-1
+  cygwin-1.5.23-2
 
 Additional requirements for the xmms plugin:
   glib-1.2.10-3
   gtk+-1.2.10-2
+  libmpeg4ip0-1.5.0.1-1
   xmms-1.2.10-4
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.21-1
-  autoconf2.5-2.59-2
-  automake1.9-1.9.6-1
-  binutils-20060709-1
-  cygport-0.2.4-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  gcc-g++-3.4.4-1
-  libtool1.5-1.5.22-1
+  cygwin-1.5.23-2
+  autoconf2.5-2.60-2
+  automake1.10-1.10-1
+  binutils-20060817-1
+  cygport-0.2.7-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  libtool1.5-1.5.23a-2
   make-3.81-1
-  sed-4.1.5-1
+  sed-4.1.5-2
 
 Canonical website:
   http://www.audiocoding.com/
@@ -47,54 +48,51 @@ This will create:
   /usr/src/faad2-2.0-X.tar.bz2
   /usr/src/libfaad-devel-2.0-X.tar.bz2
   /usr/src/libfaad0-2.0-X.tar.bz2
+  /usr/src/libmp4ff-devel-2.0-X.tar.bz2
   /usr/src/libmp4ff0-2.0-X.tar.bz2
-  /usr/src/libmp4v2_0-2.0-X.tar.bz2
   /usr/src/xmms-mp4-2.0-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
+Files included in the binary packages:
 
   /usr/bin/faad.exe
   /usr/share/doc/Cygwin/faad2-2.0.README
   /usr/share/doc/faad2-2.0/AUTHORS
   /usr/share/doc/faad2-2.0/ChangeLog
   /usr/share/doc/faad2-2.0/COPYING
-  /usr/share/doc/faad2-2.0/INSTALL
   /usr/share/doc/faad2-2.0/NEWS
   /usr/share/doc/faad2-2.0/README
   /usr/share/doc/faad2-2.0/TODO
 
-Files included in the runtime library packages:
-
+(libfaad0)
   /usr/bin/cygfaad-0.dll
 
-  /usr/bin/cygmp4ff-0.dll
-
-  /usr/bin/cygmp4v2-0.dll
-
-Files included in the devel package:
-
+(libfaad-devel)
   /usr/include/faad.h
-  /usr/include/mp4.h
-  /usr/include/mp4ff.h
-  /usr/include/mpeg4ip.h
-  /usr/include/systems.h
+  /usr/lib/libfaad.a
   /usr/lib/libfaad.dll.a
   /usr/lib/libfaad.la
+
+(libmp4ff0)
+  /usr/bin/cygmp4ff-0.dll
+
+(libmp4ff-devel)
+  /usr/include/mp4ff.h
+  /usr/lib/libmp4ff.a
   /usr/lib/libmp4ff.dll.a
   /usr/lib/libmp4ff.la
-  /usr/lib/libmp4v2.dll.a
-  /usr/lib/libmp4v2.la
 
-Files included in the xmms-mp4 package:
-
+(xmms-mp4)
   /usr/lib/xmms/Input/cygmp4.dll
   /usr/lib/xmms/Input/libmp4.la
 
 ------------------
 
 Port Notes:
+
+----- version 2.0-3 -----
+Rebuilt to use mpeg4ip's libmp4v2.
 
 ----- version 2.0-2 -----
 Rebuilt for compatibility with socklen_t definition in cygwin-1.5.21.
