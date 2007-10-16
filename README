@@ -5,26 +5,31 @@ and includes code for SBR (HE AAC) decoding. FAAD2 is licensed under the
 GPL.
 
 Runtime requirements:
-  cygwin-1.5.23-2
-
-Additional requirements for the xmms plugin:
+  cygwin-1.5.24-2
+(bmp-mp4)
+  bmp-0.9.7.1-1
+  glib2-2.12.13-1
+  gtk2-x11-2.10.14-1
+(mpeg4ip-faad2)
+  mpeg4ip-1.6.1-1
+(xmms-mp4)
   glib-1.2.10-3
   gtk+-1.2.10-2
-  libmpeg4ip0-1.5.0.1-1
   xmms-1.2.10-4
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.23-2
-  autoconf2.5-2.60-2
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
   automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.2.7-1
+  cygport-0.3.6-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
   libtool1.5-1.5.23a-2
   make-3.81-1
+  pkg-config-0.21-1
   sed-4.1.5-2
 
 Canonical website:
@@ -32,56 +37,57 @@ Canonical website:
   http://sourceforge.net/projects/faac/
 
 Canonical download:
-  http://prdownloads.sourceforge.net/faac/
+  http://downloads.sourceforge.net/faac/
 
 -------------------------------------------
 
 Build instructions:
-  unpack faad2-2.0-X-src.tar.bz2
+  unpack faad2-2.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./faad2-2.0-X.cygport all
+  cygport ./faad2-2.6-X.cygport all
 
 This will create:
-  /usr/src/faad2-2.0-X-src.tar.bz2
-  /usr/src/faad2-2.0-X.tar.bz2
-  /usr/src/libfaad-devel-2.0-X.tar.bz2
-  /usr/src/libfaad0-2.0-X.tar.bz2
-  /usr/src/libmp4ff-devel-2.0-X.tar.bz2
-  /usr/src/libmp4ff0-2.0-X.tar.bz2
-  /usr/src/xmms-mp4-2.0-X.tar.bz2
+  /usr/src/bmp-mp4-2.6-X.tar.bz2
+  /usr/src/faad2-2.6-X-src.tar.bz2
+  /usr/src/faad2-2.6-X.tar.bz2
+  /usr/src/libfaad-devel-2.6-X.tar.bz2
+  /usr/src/libfaad0-2.6-X.tar.bz2
+  /usr/src/mpeg4ip-faad2-2.6-X.tar.bz2
+  /usr/src/xmms-mp4-2.6-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
+(faad2)
   /usr/bin/faad.exe
-  /usr/share/doc/Cygwin/faad2-2.0.README
-  /usr/share/doc/faad2-2.0/AUTHORS
-  /usr/share/doc/faad2-2.0/ChangeLog
-  /usr/share/doc/faad2-2.0/COPYING
-  /usr/share/doc/faad2-2.0/NEWS
-  /usr/share/doc/faad2-2.0/README
-  /usr/share/doc/faad2-2.0/TODO
+  /usr/share/doc/Cygwin/faad2-2.6.README
+  /usr/share/doc/faad2-2.6/AUTHORS
+  /usr/share/doc/faad2-2.6/COPYING
+  /usr/share/doc/faad2-2.6/ChangeLog
+  /usr/share/doc/faad2-2.6/NEWS
+  /usr/share/doc/faad2-2.6/README
+  /usr/share/doc/faad2-2.6/TODO
 
 (libfaad0)
   /usr/bin/cygfaad-0.dll
 
 (libfaad-devel)
   /usr/include/faad.h
+  /usr/include/neaacdec.h
   /usr/lib/libfaad.a
   /usr/lib/libfaad.dll.a
   /usr/lib/libfaad.la
 
-(libmp4ff0)
-  /usr/bin/cygmp4ff-0.dll
+(bmp-mp4)
+  /usr/lib/bmp/Input/cygmp4.dll
+  /usr/lib/bmp/Input/libmp4.la
 
-(libmp4ff-devel)
-  /usr/include/mp4ff.h
-  /usr/lib/libmp4ff.a
-  /usr/lib/libmp4ff.dll.a
-  /usr/lib/libmp4ff.la
+(mpeg4ip-faad2)
+  /usr/lib/mp4player_plugin/faad2_plugin.dll
+  /usr/lib/mp4player_plugin/faad2_plugin.la
 
 (xmms-mp4)
   /usr/lib/xmms/Input/cygmp4.dll
@@ -90,6 +96,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.6-1 -----
+Version bump; added BMP and MP4Player plugins.
 
 ----- version 2.0-3 -----
 Rebuilt to use mpeg4ip's libmp4v2.
