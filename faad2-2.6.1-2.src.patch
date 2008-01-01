@@ -1,0 +1,56 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x aac_utils.c -x libmp4.c -x mp4_utils.c origsrc/faad2/configure.in src/faad2/configure.in
+--- origsrc/faad2/configure.in	2008-01-01 13:36:55.765625000 -0600
++++ src/faad2/configure.in	2008-01-01 13:36:58.296875000 -0600
+@@ -18,7 +18,7 @@
+ AC_PROG_CC
+ AC_PROG_CPP
+ dnl disable for mpeg4ip plugin
+-dnl AC_PROG_CXX
++AC_PROG_CXX
+ AC_PROG_INSTALL
+ AC_PROG_LN_S
+ AC_PROG_MAKE_SET
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x aac_utils.c -x libmp4.c -x mp4_utils.c origsrc/faad2/libfaad/Makefile.am src/faad2/libfaad/Makefile.am
+--- origsrc/faad2/libfaad/Makefile.am	2004-11-08 02:06:09.000000000 -0600
++++ src/faad2/libfaad/Makefile.am	2008-01-01 13:36:58.296875000 -0600
+@@ -3,7 +3,7 @@
+ include_HEADERS = $(top_srcdir)/include/faad.h \
+                   $(top_srcdir)/include/neaacdec.h
+ 
+-libfaad_la_LDFLAGS = -lm
++libfaad_la_LDFLAGS = -no-undefined -lm
+ 
+ libfaad_la_SOURCES = bits.c cfft.c decoder.c drc.c \
+ drm_dec.c error.c filtbank.c \
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x aac_utils.c -x libmp4.c -x mp4_utils.c origsrc/faad2/plugins/mpeg4ip/Makefile.am src/faad2/plugins/mpeg4ip/Makefile.am
+--- origsrc/faad2/plugins/mpeg4ip/Makefile.am	2003-08-07 12:21:21.000000000 -0500
++++ src/faad2/plugins/mpeg4ip/Makefile.am	2008-01-01 13:36:58.875000000 -0600
+@@ -1,7 +1,7 @@
+ libdir = @MPEG4IP_PLAYER_PLUGIN_DIR@
+ 
+ lib_LTLIBRARIES = faad2_plugin.la
+-faad2_plugin_la_LDFLAGS = -module
++faad2_plugin_la_LDFLAGS = -module -avoid-version -no-undefined
+ faad2_plugin_la_SOURCES = \
+ 	faad2.cpp \
+ 	faad2.h \
+@@ -10,7 +10,7 @@
+ 
+ faad2_plugin_la_LIBADD = \
+ 	$(top_builddir)/libfaad/libfaad.la \
+-	-lm
++	-lmp4util -lm
+ 
+ 
+ INCLUDES =  -I$(top_srcdir)/include
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x aac_utils.c -x libmp4.c -x mp4_utils.c origsrc/faad2/plugins/xmms/src/Makefile.am src/faad2/plugins/xmms/src/Makefile.am
+--- origsrc/faad2/plugins/xmms/src/Makefile.am	2006-09-25 14:52:53.000000000 -0500
++++ src/faad2/plugins/xmms/src/Makefile.am	2008-01-01 13:36:58.906250000 -0600
+@@ -9,6 +9,6 @@
+ libmp4_la_LIBADD = $(top_builddir)/libfaad/libfaad.la \
+        $(top_builddir)/common/mp4ff/libmp4ff.la
+ 
+-libmp4_la_LDFLAGS = -module -avoid-version $(local_LDFLAGS) -lpthread
++libmp4_la_LDFLAGS = -module -avoid-version -no-undefined $(local_LDFLAGS) -lpthread
+ 
+ libmp4_la_SOURCES = libmp4.c mp4_utils.c aac_utils.c

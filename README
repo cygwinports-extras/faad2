@@ -5,21 +5,17 @@ and includes code for SBR (HE AAC) decoding. FAAD2 is licensed under the
 GPL.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-(bmp-mp4)
-  bmp-0.9.7.1-1
-  glib2-2.12.13-1
-  gtk2-x11-2.10.14-1
+  cygwin-1.5.25-7
 (mpeg4ip-faad2)
   mpeg4ip-1.6.1-1
 (xmms-mp4)
   glib-1.2.10-3
   gtk+-1.2.10-2
-  xmms-1.2.10-4
+  xmms-1.2.11-1
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.24-2
+  cygwin-1.5.25-7
   autoconf2.5-2.61-1
   automake1.10-1.10-1
   binutils-20060817-1
@@ -49,7 +45,6 @@ Build instructions:
   cygport ./faad2-2.6.1-X.cygport all
 
 This will create:
-  /usr/src/bmp-mp4-2.6.1-X.tar.bz2
   /usr/src/faad2-2.6.1-X-src.tar.bz2
   /usr/src/faad2-2.6.1-X.tar.bz2
   /usr/src/libfaad-devel-2.6.1-X.tar.bz2
@@ -81,10 +76,6 @@ Files included in the binary packages:
   /usr/lib/libfaad.dll.a
   /usr/lib/libfaad.la
 
-(bmp-mp4)
-  /usr/lib/bmp/Input/cygmp4.dll
-  /usr/lib/bmp/Input/libmp4.la
-
 (mpeg4ip-faad2)
   /usr/lib/mp4player_plugin/faad2_plugin.dll
   /usr/lib/mp4player_plugin/faad2_plugin.la
@@ -96,6 +87,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.6.1-2 -----
+Disabled BMP plugin.  Rebuilt XMMS plugin for 1.2.11.
 
 ----- version 2.6.1-1 -----
 Version bump.

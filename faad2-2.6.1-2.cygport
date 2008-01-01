@@ -1,0 +1,20 @@
+DESCRIPTION="AAC decoder library"
+HOMEPAGE="http://www.audiocoding.com/"
+SRC_URI="mirror://sourceforge/faac/${P}.tar.gz"
+PATCH_URI="
+	http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/~checkout~/SOURCES/faad2-mpeg4ip.patch
+"
+SRC_DIR="${PN}"
+
+abi=0
+PKG_NAMES="${PN} libfaad${abi} libfaad-devel xmms-mp4 mpeg4ip-mp4"
+PKG_HINTS='setup libfaad libfaad-devel xmms mpeg4ip'
+PKG_CONTENTS[0]='usr/bin/*.exe usr/share/doc/'
+PKG_CONTENTS[1]="usr/bin/cygfaad-${abi}.dll"
+PKG_CONTENTS[2]='usr/include/ usr/lib/lib*'
+PKG_CONTENTS[3]='usr/lib/xmms/'
+PKG_CONTENTS[4]='usr/lib/mp4player_plugin/'
+
+DIFF_EXCLUDES="aac_utils.c libmp4.c mp4_utils.c"
+
+CYGCONF_ARGS="--with-drm --with-bmp --with-xmms --with-mpeg4ip"
