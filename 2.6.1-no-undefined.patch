@@ -1,14 +1,3 @@
---- origsrc/faad2/configure.in	2008-01-01 13:36:55.765625000 -0600
-+++ src/faad2/configure.in	2008-01-01 13:36:58.296875000 -0600
-@@ -18,7 +18,7 @@
- AC_PROG_CC
- AC_PROG_CPP
- dnl disable for mpeg4ip plugin
--dnl AC_PROG_CXX
-+AC_PROG_CXX
- AC_PROG_INSTALL
- AC_PROG_LN_S
- AC_PROG_MAKE_SET
 --- origsrc/faad2/libfaad/Makefile.am	2004-11-08 02:06:09.000000000 -0600
 +++ src/faad2/libfaad/Makefile.am	2008-01-01 13:36:58.296875000 -0600
 @@ -3,7 +3,7 @@

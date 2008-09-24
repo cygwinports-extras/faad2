@@ -5,27 +5,22 @@ and includes code for SBR (HE AAC) decoding. FAAD2 is licensed under the
 GPL.
 
 Runtime requirements:
-  cygwin-1.5.25-7
+  cygwin-1.5.25-15
 (mpeg4ip-faad2)
   mpeg4ip-1.6.1-1
-(xmms-mp4)
-  glib-1.2.10-3
-  gtk+-1.2.10-2
-  xmms-1.2.11-1
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.25-7
   autoconf2.5-2.61-1
-  automake1.10-1.10-1
-  binutils-20060817-1
-  cygport-0.3.7-1
-  gawk-3.1.5-4
+  automake1.10-1.10.1-1
+  binutils-20080624-2
+  cygport-0.4.0-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
-  libtool1.5-1.5.23a-2
+  libtool-2.2.2-2
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical website:
@@ -50,7 +45,6 @@ This will create:
   /usr/src/libfaad-devel-2.6.1-X.tar.bz2
   /usr/src/libfaad0-2.6.1-X.tar.bz2
   /usr/src/mpeg4ip-faad2-2.6.1-X.tar.bz2
-  /usr/src/xmms-mp4-2.6.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -58,7 +52,6 @@ Files included in the binary packages:
 
 (faad2)
   /usr/bin/faad.exe
-  /usr/share/doc/Cygwin/faad2-2.6.1.README
   /usr/share/doc/faad2-2.6.1/AUTHORS
   /usr/share/doc/faad2-2.6.1/COPYING
   /usr/share/doc/faad2-2.6.1/ChangeLog
@@ -80,13 +73,12 @@ Files included in the binary packages:
   /usr/lib/mp4player_plugin/faad2_plugin.dll
   /usr/lib/mp4player_plugin/faad2_plugin.la
 
-(xmms-mp4)
-  /usr/lib/xmms/Input/cygmp4.dll
-  /usr/lib/xmms/Input/libmp4.la
-
 ------------------
 
 Port Notes:
+
+----- version 2.6.1-3 -----
+Added patches from Gentoo.  Disabled XMMS plugin.
 
 ----- version 2.6.1-2 -----
 Disabled BMP plugin.  Rebuilt XMMS plugin for 1.2.11.
