@@ -5,14 +5,13 @@ PATCH_URI="
 	http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/~checkout~/SOURCES/faad2-mpeg4ip.patch
 	2.7-no-undefined.patch
 	2.7-manpage-install.patch
-	2.7-gcc34.patch
 "
 
-PKG_NAMES="${PN} libfaad2 libfaad-devel libmp4ff-devel mpeg4ip-${PN}"
+PKG_NAMES="${PN} libfaad2 libfaad-devel libmp4ff-devel" # mpeg4ip-${PN}"
 faad2_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/man/man1/'
 libfaad2_CONTENTS="usr/bin/cygfaad-2.dll"
 libfaad_devel_CONTENTS='usr/include/faad.h usr/include/neaacdec.h usr/lib/libfaad.*'
 libmp4ff_devel_CONTENTS="usr/include/mp4ff* usr/lib/libmp4ff.*"
-mpeg4ip_faad2_CONTENTS='usr/lib/mp4player_plugin/'
+#mpeg4ip_faad2_CONTENTS='usr/lib/mp4player_plugin/'
 
-CYGCONF_ARGS="--with-drm --without-xmms --with-mpeg4ip"
+CYGCONF_ARGS="--with-drm --without-xmms --without-mpeg4ip"

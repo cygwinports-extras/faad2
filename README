@@ -5,20 +5,19 @@ and includes code for SBR (HE AAC) decoding. FAAD2 is licensed under the
 GPL.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-(mpeg4ip-faad2)
-  mpeg4ip-1.6.1-2
+  cygwin-1.7.0-44
+  libgcc1-4.3.2-2
 
 Build requirements:
 (besides corresponding devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  libtool-2.2.6a-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  libtool-2.2.7a-11
   make-3.81-2
   pkg-config-0.23a-2
   sed-4.1.5-2
@@ -44,7 +43,6 @@ This will create:
   /usr/src/faad2-2.7-X.tar.bz2
   /usr/src/libfaad-devel-2.7-X.tar.bz2
   /usr/src/libfaad2-2.7-X.tar.bz2
-  /usr/src/mpeg4ip-faad2-2.7-X.tar.bz2
 
 -------------------------------------------
 
@@ -52,12 +50,12 @@ Files included in the binary packages:
 
 (faad2)
   /usr/bin/faad.exe
-  /usr/share/doc/faad2-2.7/AUTHORS
-  /usr/share/doc/faad2-2.7/COPYING
-  /usr/share/doc/faad2-2.7/ChangeLog
-  /usr/share/doc/faad2-2.7/NEWS
-  /usr/share/doc/faad2-2.7/README
-  /usr/share/doc/faad2-2.7/TODO
+  /usr/share/doc/faad2/AUTHORS
+  /usr/share/doc/faad2/COPYING
+  /usr/share/doc/faad2/ChangeLog
+  /usr/share/doc/faad2/NEWS
+  /usr/share/doc/faad2/README
+  /usr/share/doc/faad2/TODO
   /usr/share/man/man1/faad.1.gz
 
 (libfaad2)
@@ -75,37 +73,12 @@ Files included in the binary packages:
   /usr/include/mp4ffint.h
   /usr/lib/libmp4ff.a
 
-(mpeg4ip-faad2)
-  /usr/lib/mp4player_plugin/faad2_plugin.dll
-  /usr/lib/mp4player_plugin/faad2_plugin.la
-
 ------------------
 
 Port Notes:
 
------ version 2.7-1 -----
-Version bump.
-
------ version 2.6.1-3 -----
-Added patches from Gentoo.  Disabled XMMS plugin.
-
------ version 2.6.1-2 -----
-Disabled BMP plugin.  Rebuilt XMMS plugin for 1.2.11.
-
------ version 2.6.1-1 -----
-Version bump.
-
------ version 2.6-1 -----
-Version bump; added BMP and MP4Player plugins.
-
------ version 2.0-3 -----
-Rebuilt to use mpeg4ip's libmp4v2.
-
------ version 2.0-2 -----
-Rebuilt for compatibility with socklen_t definition in cygwin-1.5.21.
-
------ version 2.0-1 -----
-Initial release for Cygwin.
+----- version 2.7-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

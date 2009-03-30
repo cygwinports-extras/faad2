@@ -1,5 +1,5 @@
-category: Audio Libs
-requires: cygwin
+category: Audio
+requires: cygwin libgcc1
 external-source: faad2
 sdesc: "AAC decoder library (runtime)"
 ldesc: "FAAD2 is a HE, LC, MAIN and LTP profile, MPEG2 and MPEG-4 AAC
