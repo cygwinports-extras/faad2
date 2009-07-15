@@ -2,7 +2,6 @@ DESCRIPTION="AAC decoder library"
 HOMEPAGE="http://www.audiocoding.com/"
 SRC_URI="mirror://sourceforge/faac/${P}.tar.gz"
 PATCH_URI="
-	http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/~checkout~/SOURCES/faad2-mpeg4ip.patch
 	2.7-no-undefined.patch
 	2.7-manpage-install.patch
 "
