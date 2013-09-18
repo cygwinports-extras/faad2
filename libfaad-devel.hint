@@ -1,7 +1,0 @@
-category: Audio
-requires: libfaad2
-external-source: faad2
-sdesc: "AAC decoder library (development)"
-ldesc: "FAAD2 is a HE, LC, MAIN and LTP profile, MPEG2 and MPEG-4 AAC
-decoder, and includes code for SBR (HE AAC) decoding. FAAD2 is licensed
-under the GPL."
