@@ -1,6 +1,6 @@
 NAME="faad2"
-VERSION=2.7
-RELEASE=10
+VERSION=2.8.8
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="MPEG4/AAC decoder"
 DESCRIPTION="FAAD2 is a HE, LC, MAIN and LTP profile, MPEG2 and MPEG-4 AAC
@@ -8,16 +8,15 @@ decoder, and includes code for SBR (HE AAC) decoding. FAAD2 is licensed
 under the GPL."
 HOMEPAGE="http://www.audiocoding.com/"
 SRC_URI="mirror://sourceforge/faac/faad2-${VERSION}.tar.gz"
-PATCH_URI="
-	2.7-no-undefined.patch
-	2.7-manpage-install.patch
-"
 
-PKG_NAMES="faad2 libfaad2 libfaad-devel libmp4ff-devel"
+PKG_NAMES="faad2 libfaad2 libfaad-devel"
 faad2_CATEGORY="Audio"
 faad2_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/man/man1/'
-libfaad2_CONTENTS="usr/bin/cygfaad-2.dll"
-libfaad_devel_CONTENTS='usr/include/faad.h usr/include/neaacdec.h usr/lib/libfaad.*'
-libmp4ff_devel_CONTENTS="usr/include/mp4ff* usr/lib/libmp4ff.*"
+libfaad2_CONTENTS="usr/bin/cygfaad*-2.dll"
+libfaad_devel_CONTENTS="
+	usr/include/faad.h
+	usr/include/neaacdec.h
+	usr/lib/libfaad*.dll.a
+"
 
 CYGCONF_ARGS="--with-drm --without-xmms --without-mpeg4ip"
